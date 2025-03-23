@@ -16,6 +16,7 @@ function Files() {
                 <Link to="/" className="nav-link">Главная</Link>
                 <Link to="/crossword" className="nav-link">Кроссворд</Link>
                 <Link to="/examples" className="nav-link">Примеры</Link>
+                <Link to="/tasks" className="nav-link">Задание</Link>
                 <Link to="/files" className="nav-link active">Файлы</Link>
             </nav>
 

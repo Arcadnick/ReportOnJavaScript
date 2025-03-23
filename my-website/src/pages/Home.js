@@ -9,6 +9,7 @@ function Home() {
             <div className="button-container">
                 <Link to="/crossword" className="nav-button">Кроссворд</Link>
                 <Link to="/examples" className="nav-button">Примеры</Link>
+                <Link to="/tasks" className="nav-button">Задание</Link>
                 <Link to="/files" className="nav-button">Файлы</Link>
             </div>
         </div>
