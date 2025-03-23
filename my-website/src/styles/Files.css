@@ -16,6 +16,19 @@ html, body {
     text-align: center;
 }
 
+.navbar {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
 .nav-link {
     color: white;
     text-decoration: none;
