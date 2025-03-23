@@ -1,0 +1,17 @@
+.questions {
+    text-align: left;
+}
+
+.questions h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.questions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.questions li {
+    margin: 5px 0;
+}
