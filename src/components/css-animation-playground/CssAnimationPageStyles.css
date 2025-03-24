@@ -124,10 +124,10 @@
   font-weight: 500;
 }
 
-.css-code:focus {
-  outline: none;
-  box-shadow: inset 0 0 0 2px rgba(79, 70, 229, 0.2);
-}
+/*.css-code:focus {*/
+/*  outline: none;*/
+/*  box-shadow: inset 0 0 0 2px rgba(79, 70, 229, 0.2);*/
+/*}*/
 
 /* Стили для подсветки синтаксиса */
 .css-keyword {

@@ -45,10 +45,11 @@ const CssEditor = ({ onAnimationStart, onAnimationStop }) => {
     
     // Создаем новые номера строк
     const lines = (cssCode || '').split('\n');
-    for (let i = 0; i < lines.length; i++) {
+    for (let i = 0; i < lines.length+1; i++) {
       const div = document.createElement('div');
       div.textContent = (i + 1).toString();
       lineNumbersRef.current.appendChild(div);
+      console.log(i);
     }
   };
 
