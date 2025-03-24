@@ -125,7 +125,7 @@ const SquarePreview = ({ isAnimating }) => {
       
       <div className="p-4 text-sm text-primary">
         {isAnimating 
-          ? (isPaused ? 'Анимация приостановлена. Нажмите "Resume" для продолжения.' : 'Анимация запущена.')
+          ? (isPaused ? 'Нажмите "Resume" для продолжения.' : '')
           : 'Нажмите "Run Animation" для запуска анимации.'}
       </div>
     </div>

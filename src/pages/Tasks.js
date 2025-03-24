@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Tasks.css";
 import { Link } from "react-router-dom";
+import CssAnimationPage from "../components/css-animation-playground/CssAnimationPage";
 
 function Tasks() {
     const tasks = [
@@ -32,6 +33,7 @@ function Tasks() {
 
     return (
         <div className="tasks-container">
+            {/* Навигация */}
             <nav className="navbar">
                 <Link to="/" className="nav-link">Главная</Link>
                 <Link to="/crossword" className="nav-link">Кроссворд</Link>
@@ -39,7 +41,10 @@ function Tasks() {
                 <Link to="/tasks" className="nav-link active">Задание</Link>
                 <Link to="/files" className="nav-link">Файлы</Link>
             </nav>
+
             <h1 className="tasks-title">Задания</h1>
+
+            {/* Список заданий */}
             <div className="tasks-list">
                 {tasks.map(task => (
                     <div key={task.id} className="task-card">
@@ -48,6 +53,12 @@ function Tasks() {
                         <button className="task-btn">{task.action}</button>
                     </div>
                 ))}
+            </div>
+
+            {/* Блок с CSS-компилятором */}
+            <div className="compiler-container">
+                {/*<h2 className="compiler-title">CSS Animation Playground</h2>*/}
+                <CssAnimationPage />
             </div>
         </div>
     );

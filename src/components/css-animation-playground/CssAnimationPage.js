@@ -52,43 +52,29 @@ const CssAnimationPage = () => {
   }, []);
 
   return (
-    <div className="css-animation-page">
-      {/* Header */}
-      <div className="header">
-        <h1>CSS Компилятор Анимаций</h1>
-        <div className="how-to-use">
-          <h2 className="section-title">Как использовать</h2>
-          <p>
-            Отредактируйте код CSS-анимации в редакторе ниже, затем нажмите "Run Animation", 
-            чтобы увидеть, как она применяется к 2D квадрату. Редактор уже содержит образец анимации, 
-            чтобы вы могли начать.
-          </p>
-          <button 
-            onClick={() => setIsHelpModalOpen(true)} 
-            className="btn-help"
-          >
-            Показать примеры и справку
-          </button>
+      <div className="css-animation-page">
+        {/* Header */}
+        <div className="header">
+          <h1>CSS Компилятор Анимаций</h1>
         </div>
-      </div>
 
-      {/* Main content area */}
-      <div className="main-container">
-        <CssEditor 
-          onAnimationStart={() => setIsAnimating(true)} 
-          onAnimationStop={() => setIsAnimating(false)}
-        />
-        <SquarePreview isAnimating={isAnimating} />
-      </div>
+        {/* Main content area */}
+        <div className="main-container">
+          <CssEditor
+              onAnimationStart={() => setIsAnimating(true)}
+              onAnimationStop={() => setIsAnimating(false)}
+          />
+          <SquarePreview isAnimating={isAnimating}/>
+        </div>
 
-      {/* Footer */}
-      <div className="p-4 mt-4 text-center text-primary">
-        <p>CSS Компилятор Анимаций - Создан для образовательных целей</p>
-      </div>
+          <button
+              onClick={() => setIsHelpModalOpen(true)}
+              className="btn-help"
+          >Показать справку и советы.</button>
 
-      {/* Help Modal */}
-      <HelpModal isOpen={isHelpModalOpen} onClose={() => setIsHelpModalOpen(false)} />
-    </div>
+        {/* Help Modal */}
+        <HelpModal isOpen={isHelpModalOpen} onClose={() => setIsHelpModalOpen(false)}/>
+      </div>
   );
 };
 

@@ -162,32 +162,30 @@ const CssEditor = ({ onAnimationStart, onAnimationStop }) => {
       </div>
       
       <div className="editor-wrapper">
-        <div ref={lineNumbersRef} className="line-numbers"></div>
-        
-        <pre 
-          ref={editorRef}
-          id="css-editor"
-          className="css-code"
-          contentEditable="true"
-          spellCheck="false"
-          onInput={handleEditorChange}
-          onKeyDown={handleTabKey}
-          suppressContentEditableWarning={true}
-        >
-          {cssCode}
-        </pre>
+        <div className="editor-scroll-container">
+          <div ref={lineNumbersRef} className="line-numbers"></div>
+          
+          <pre 
+            ref={editorRef}
+            id="css-editor"
+            className="css-code"
+            contentEditable="true"
+            spellCheck="false"
+            onInput={handleEditorChange}
+            onKeyDown={handleTabKey}
+            suppressContentEditableWarning={true}
+          >
+            {cssCode}
+          </pre>
+        </div>
       </div>
       
       {/* Status bar */}
-      <div className={`p-2 text-sm ${statusMessage.type === 'success' ? 'text-success' : 'text-error'}`}>
+      <div className={`status-bar p-2 text-sm ${statusMessage.type === 'success' ? 'text-success' : 'text-error'}`}>
         {statusMessage.type === 'success' ? '✓' : '⚠'} {statusMessage.text}
       </div>
       
       <style>{`
-        .line-numbers {
-          display: flex;
-          flex-direction: column;
-        }
         .line-numbers > div {
           display: block;
           width: 30px;
@@ -195,6 +193,7 @@ const CssEditor = ({ onAnimationStart, onAnimationStop }) => {
           text-align: right;
           color: #6b7280;
           height: 1.5em;
+          line-height: 1.5;
         }
       `}</style>
     </div>

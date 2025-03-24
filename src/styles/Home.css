@@ -16,11 +16,32 @@ html, body {
     text-align: center;
 }
 
+/*.home-title {*/
+/*    font-size: 3rem;*/
+/*    margin-bottom: 30px;*/
+/*    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);*/
+/*}*/
+
 .home-title {
     font-size: 3rem;
     margin-bottom: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    color: #333;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
+
+.home-title:hover {
+    color: #fff;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 
 .button-container {
     display: flex;
