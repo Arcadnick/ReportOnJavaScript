@@ -18,7 +18,7 @@ export const gridData = [
   [null, null, null, "I", null, "S", null, null, null, null, null, null, null],
   [null, null, null, "O", null, "C", null, null, null, null, null, null, null],
   [null, null, null, "N", null, "R", null, null, null, null, null, null, null],
-  [null, null, null, null, null, "I", "N", "F", "I", "T", "E", null, null],
+  [null, null, null, null, null, "I", "N", "F", "I", "N", "I", "T", "E"],
   [null, null, null, null, null, "P", null, null, null, null, null, null, null],
   [null, null, null, null, null, "T", null, null, null, null, null, null, null]
 ];
