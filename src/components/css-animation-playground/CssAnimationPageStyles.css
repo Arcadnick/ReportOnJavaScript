@@ -1,0 +1,426 @@
+/* CSS для страницы CSS-анимаций */
+
+/* Основные стили для страницы */
+.css-animation-page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.header p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.how-to-use {
+  background-color: #f9fafb;
+  border-left: 4px solid #4F46E5;
+  padding: 15px;
+  border-radius: 0 5px 5px 0;
+  margin-bottom: 20px;
+}
+
+/* Стили для редактора */
+.editor-container {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.editor-header {
+  background-color: #f9fafb;
+  padding: 10px 15px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editor-title {
+  font-weight: 600;
+  font-size: 18px;
+  color: #4F46E5;
+}
+
+.editor-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.editor-wrapper {
+  height: 400px;
+  display: flex;
+}
+
+.line-numbers {
+  padding: 10px 10px 10px 15px;
+  background-color: #f9fafb;
+  border-right: 1px solid #e5e7eb;
+  text-align: right;
+  color: #6b7280;
+  font-family: 'Courier New', monospace;
+  user-select: none;
+  min-width: 40px;
+}
+
+.css-code {
+  flex-grow: 1;
+  padding: 10px 15px;
+  font-family: 'Courier New', monospace;
+  line-height: 1.5;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  outline: none;
+  /* Убираем счетчик строк, так как нумерация добавляется в JavaScript */
+  background-color: #fff;
+  color: #333;
+}
+
+.css-code:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+/* Стили для подсветки синтаксиса */
+.css-keyword {
+  color: #7C3AED; /* фиолетовый для ключевых слов */
+}
+
+.css-property {
+  color: #2563EB; /* синий для свойств */
+}
+
+.css-value {
+  color: #059669; /* зеленый для значений */
+}
+
+.css-selector {
+  color: #DC2626; /* красный для селекторов */
+}
+
+.css-comment {
+  color: #6B7280; /* серый для комментариев */
+  font-style: italic;
+}
+
+/* Стили для превью */
+.preview-container {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.preview-header {
+  background-color: #f9fafb;
+  padding: 10px 15px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.preview-title {
+  font-weight: 600;
+  font-size: 18px;
+  color: #4F46E5;
+}
+
+.preview-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.preview-area {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #f9fafb;
+  background-image: 
+    linear-gradient(45deg, #e5e7eb 25%, transparent 25%), 
+    linear-gradient(-45deg, #e5e7eb 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e5e7eb 75%),
+    linear-gradient(-45deg, transparent 75%, #e5e7eb 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #4F46E5;
+  position: relative;
+}
+
+.status-message {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Кнопки */
+button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #4F46E5;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #4338CA;
+}
+
+.btn-secondary {
+  background-color: white;
+  border-color: #d1d5db;
+  color: #4b5563;
+}
+
+.btn-secondary:hover {
+  background-color: #f9fafb;
+}
+
+.btn-success {
+  background-color: #10B981;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #059669;
+}
+
+.btn-danger {
+  background-color: #EF4444;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #DC2626;
+}
+
+.btn-help {
+  background-color: transparent;
+  color: #4F46E5;
+  text-decoration: underline;
+  padding: 2px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Модальное окно */
+.help-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.help-modal-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 768px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.help-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.help-modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+  padding: 0;
+  color: #6b7280;
+}
+
+.help-modal-section {
+  margin-bottom: 20px;
+}
+
+.help-modal-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #4F46E5;
+}
+
+.help-modal-section pre {
+  background-color: #f9fafb;
+  padding: 15px;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  margin: 10px 0;
+  border: 1px solid #e5e7eb;
+}
+
+.example-item {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.example-item:last-child {
+  border-bottom: none;
+}
+
+.example-button {
+  margin-top: 10px;
+}
+
+/* Утилиты */
+.text-success {
+  color: #10B981;
+}
+
+.text-error {
+  color: #EF4444;
+}
+
+.text-primary {
+  color: #4F46E5;
+}
+
+.flex {
+  display: flex;
+}
+
+.gap-2 {
+  gap: 8px;
+}
+
+.gap-4 {
+  gap: 16px;
+}
+
+.mt-4 {
+  margin-top: 16px;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.p-4 {
+  padding: 16px;
+}
+
+/* Стили для анимации */
+@keyframes squareAnimation {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100px, 0);
+  }
+  50% {
+    transform: translate(100px, 100px);
+  }
+  75% {
+    transform: translate(0, 100px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.animated-square {
+  animation: squareAnimation 2s infinite;
+}
+
+/* Адаптивная верстка */
+@media (min-width: 768px) {
+  .main-container {
+    flex-direction: row;
+  }
+  
+  .editor-container,
+  .preview-container {
+    flex: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .editor-wrapper {
+    height: 300px;
+  }
+  
+  .preview-area {
+    height: 300px;
+  }
+}
