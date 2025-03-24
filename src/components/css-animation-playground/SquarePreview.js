@@ -117,7 +117,7 @@ const SquarePreview = ({ isAnimating }) => {
         <style ref={styleRef} id="square-animation-style"></style>
         
         {isAnimating && (
-          <div className="status-message">
+          <div className="status-messages">
             {isPaused ? 'Анимация приостановлена' : 'Анимация запущена'}
           </div>
         )}

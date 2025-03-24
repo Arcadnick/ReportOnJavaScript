@@ -7,7 +7,7 @@
   background: linear-gradient(to right, #6a11cb, #2575fc);
   color: white;
   min-height: 100vh;
-  padding: 20px;
+  padding: 40px;
   font-family: 'Arial', sans-serif;
 }
 
@@ -57,6 +57,7 @@
   -webkit-background-clip: text;
   color: transparent;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 50px;
 }
 
 .crossword-advanced-subtitle {

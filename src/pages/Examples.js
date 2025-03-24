@@ -7,8 +7,8 @@ function Examples() {
         <div className="examples-container">
             <nav className="navbar">
                 <Link to="/" className="nav-link">Главная</Link>
-                <Link to="/crossword" className="nav-link">Кроссворд</Link>
                 <Link to="/examples" className="nav-link active">Примеры</Link>
+                <Link to="/crossword" className="nav-link">Кроссворд</Link>
                 <Link to="/tasks" className="nav-link">Задания</Link>
                 <Link to="/files" className="nav-link">Файлы</Link>
             </nav>
