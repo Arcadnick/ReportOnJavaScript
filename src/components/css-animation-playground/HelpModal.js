@@ -1,15 +1,12 @@
-import { useState } from 'react';
-
 const HelpModal = ({ isOpen, onClose }) => {
-  const [activeTab, setActiveTab] = useState('examples');
-  
+
   if (!isOpen) return null;
   
   return (
     <div className="help-modal-overlay">
       <div className="help-modal-content">
         <div className="help-modal-header">
-          <h2 className="help-modal-title">Помощь и примеры</h2>
+          <h2 className="help-modal-title">Справка и советы</h2>
           <button 
             onClick={onClose}
             className="close-button"
@@ -17,101 +14,23 @@ const HelpModal = ({ isOpen, onClose }) => {
             ✕
           </button>
         </div>
-        
-        <div className="flex mb-4 border-b border-gray-200">
-          <button 
-            className={`py-2 px-4 ${activeTab === 'examples' ? 'text-primary border-b-2 border-primary' : 'text-gray-600'}`}
-            onClick={() => setActiveTab('examples')}
-          >
-            Примеры
-          </button>
-          <button 
-            className={`py-2 px-4 ${activeTab === 'tips' ? 'text-primary border-b-2 border-primary' : 'text-gray-600'}`}
-            onClick={() => setActiveTab('tips')}
-          >
-            Советы
-          </button>
-        </div>
-        
+
         <div className="overflow-y-auto">
-          {activeTab === 'examples' ? (
-            <div className="help-modal-section">
-              <h3>Примеры CSS-анимаций</h3>
-              
-              <div className="example-item">
-                <h4 className="font-medium mb-2">Вращение</h4>
-                <pre>
-{`@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.square {
-  animation: rotate 2s linear infinite;
-}`}
-                </pre>
-              </div>
-              
-              <div className="example-item">
-                <h4 className="font-medium mb-2">Пульсация</h4>
-                <pre>
-{`@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.square {
-  animation: pulse 1.5s ease-in-out infinite;
-}`}
-                </pre>
-              </div>
-              
-              <div className="example-item">
-                <h4 className="font-medium mb-2">Движение по траектории</h4>
-                <pre>
-{`@keyframes squareAnimation {
-  0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(100px, 0);
-  }
-  50% {
-    transform: translate(100px, 100px);
-  }
-  75% {
-    transform: translate(0, 100px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-.square {
-  animation: squareAnimation 4s linear infinite;
-}`}
-                </pre>
-              </div>
+          <div className="help-modal-section">
+            <h2>Как использовать</h2>
+            <div className="example-item">
+              <p>Отредактируйте код CSS-анимации в редакторе ниже, затем нажмите "Run Animation", чтобы увидеть, как она применяется к 2D квадрату.
+                Редактор уже содержит образец анимации, чтобы вы могли начать.</p>
             </div>
-          ) : (
-            <div className="help-modal-section">
-              <h3>Полезные советы</h3>
-              
+          </div>
+
+          <div className="help-modal-section">
+            <h2>Полезные советы</h2>
+
               <div className="example-item">
                 <h4 className="font-medium mb-2">Свойства анимации</h4>
                 <p>
-                  Вы можете настраивать различные аспекты анимации, включая время выполнения, функцию плавности (ease, linear, ease-in-out), 
+                  Вы можете настраивать различные аспекты анимации, включая время выполнения, функцию плавности (ease, linear, ease-in-out),
                   задержку и количество повторений.
                 </p>
                 <pre>
@@ -128,7 +47,7 @@ const HelpModal = ({ isOpen, onClose }) => {
 }`}
                 </pre>
               </div>
-              
+
               <div className="example-item">
                 <h4 className="font-medium mb-2">Множественные анимации</h4>
                 <p>
@@ -140,7 +59,7 @@ const HelpModal = ({ isOpen, onClose }) => {
 }`}
                 </pre>
               </div>
-              
+
               <div className="example-item">
                 <h4 className="font-medium mb-2">Управление анимацией</h4>
                 <p>
@@ -154,9 +73,8 @@ const HelpModal = ({ isOpen, onClose }) => {
                 </pre>
               </div>
             </div>
-          )}
         </div>
-        
+
         <div className="mt-4 text-right">
           <button 
             onClick={onClose}

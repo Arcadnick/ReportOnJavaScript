@@ -77,15 +77,14 @@ export default function CrosswordAdvanced() {
       <div className="crossword-advanced-container">
         <nav className="navbar">
           <Link to="/" className="nav-link">Главная</Link>
-          <Link to="/crossword" className="nav-link active">Кроссворд</Link>
           <Link to="/examples" className="nav-link">Примеры</Link>
-          <Link to="/tasks" className="nav-link">Задание</Link>
+          <Link to="/crossword" className="nav-link active">Кроссворд</Link>
+          <Link to="/tasks" className="nav-link">Задания</Link>
           <Link to="/files" className="nav-link">Файлы</Link>
         </nav>
 
-        <header className="crossword-advanced-header">
+        <h1 className="crossword-advanced-title">Кроссворд</h1>
 
-        </header>
 
         <div className="crossword-advanced-content">
           <CrosswordGrid
