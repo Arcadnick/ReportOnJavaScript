@@ -54,6 +54,17 @@ html, body {
     animation: moveLines 5s linear infinite;
 }
 
+.line::after {
+    content: "🍉"; /* Здесь можно заменить на другую иконку, например "⬇" */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    bottom: -10px;
+    animation: moveIcons 5s linear infinite;
+}
+
 @keyframes moveLines {
     from { transform: translateY(-100%); }
     to { transform: translateY(100%); }
