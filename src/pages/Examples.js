@@ -94,8 +94,8 @@ function Examples() {
             <h3>Примечание: можно нажать на любой пример и появится код ;)</h3>
 
             {selectedAnimation && (
-                <div className="modal">
-                    <div className="modal-content">
+                <div className="modal" onClick={() => setSelectedAnimation(null)}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                         <button className="close-btn" onClick={() => setSelectedAnimation(null)}>✖</button>
                         <h2 style={{color:'black'}}>{selectedAnimation.name}</h2>
                         <pre className="codereview"><code>{selectedAnimation.code}</code></pre>
