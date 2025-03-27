@@ -1,17 +1,32 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "../styles/Files.css"
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "../styles/Files.css";
 
 function Files() {
-    const files = [
-        { name: "Презентация", link: "/.files/presentation.pdf", icon: "📊" },
-        { name: "Доклад", link: "/.files/report.pdf", icon: "📄" },
-        { name: "Примеры", link: "/.files/examples.zip", icon: "📁" },
-        { name: "Исходный код", link: "/.files/source_code.zip", icon: "💻" }
-    ];
+    const navigate = useNavigate();
+
+    const files = {
+        presentation: {
+            name: "Презентация",
+            pdf: "/.files/presentation.pdf",
+            icon: "📽"},
+        report: {
+            name: "Доклад",
+            pdf: "/.files/report.pdf",
+            icon: "📔" },
+        examples: {
+            name: "Примеры",
+            pdf: "/.files/examples.pdf",
+            zip: "/.files/examples.zip",
+            icon: "💻"
+        }
+    };
+
+    const [selectedFile, setSelectedFile] = useState(null);
 
     return (
         <div className="files-container">
+            {/* Навигация */}
             <nav className="navbar">
                 <Link to="/" className="nav-link">Главная</Link>
                 <Link to="/examples" className="nav-link">Примеры</Link>
@@ -20,17 +35,53 @@ function Files() {
                 <Link to="/files" className="nav-link active">Файлы</Link>
             </nav>
 
-            <h1 className="files-title">Файлы для скачивания</h1>
-            <ul className="files-list">
-                {files.map((file, index) => (
-                    <li key={index} className="file-item">
-                        <a href={file.link} download className="file-link">
-                            <span className="file-icon">{file.icon}</span>
-                            {file.name}
-                        </a>
-                    </li>
-                ))}
-            </ul>
+            <div className="files-content">
+                {/* Левая панель с кнопками */}
+                <div className="files-sidebar">
+                    {Object.keys(files).map((key) => (
+                        <button
+                            key={key}
+                            className={`file-button ${selectedFile === key ? "active" : ""}`}
+                            onClick={() => setSelectedFile(key)}
+                        >
+                            {files[key].icon} {files[key].name}
+                        </button>
+                    ))}
+                    {/* Гифка под кнопками */}
+                    <button className="gif-button" onClick={() => navigate("/easteregg")}>
+                        <img src={"/.files/download.gif"} alt="Перейти" className="sidebar-gif"/>
+                    </button>
+                </div>
+
+                {/* Правая панель с предпросмотром */}
+                <div className="files-preview">
+                    <div className="preview-box">
+                        {selectedFile ? (
+                            <iframe
+                                src={files[selectedFile].pdf}
+                                title="File Preview"
+                                className="pdf-viewer"
+                            ></iframe>
+                        ) : (
+                            <p className="placeholder-text">Выберите файл для предпросмотра</p>
+                        )}
+                    </div>
+
+                    {/* Кнопки скачивания */}
+                    {selectedFile && (
+                        <div className="download-buttons">
+                            <a href={files[selectedFile].pdf} download className="download-button">
+                                Скачать PDF
+                            </a>
+                            {selectedFile === "examples" && (
+                                <a href={files[selectedFile].zip} download className="download-button">
+                                    Скачать ZIP
+                                </a>
+                            )}
+                        </div>
+                    )}
+                </div>
+            </div>
         </div>
     );
 }
