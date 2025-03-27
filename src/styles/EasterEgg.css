@@ -1,0 +1,10 @@
+.easterEgg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}

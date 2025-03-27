@@ -6,6 +6,7 @@ import Examples from "./pages/Examples";
 import Files from "./pages/Files";
 import Tasks from "./pages/Tasks";
 import CssAnimationPage from './components/css-animation-playground/CssAnimationPage';
+import EasterEgg from "./pages/EasterEgg";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Route path="/files" element={<Files />} />
                 <Route path="/tasks" element={<Tasks />} />
                 <Route path="/css-animation" element={<CssAnimationPage />} />
+                <Route path="/easteregg" element={<EasterEgg />} />
             </Routes>
         </Router>
     );
