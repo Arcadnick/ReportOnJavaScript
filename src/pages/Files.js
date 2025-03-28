@@ -49,7 +49,7 @@ function Files() {
                     ))}
                     {/* Гифка под кнопками */}
                     <button className="gif-button" onClick={() => navigate("/easteregg")}>
-                        <img src={"/.files/download.gif"} alt="Перейти" className="sidebar-gif"/>
+                        <img src={"/.files/download.gif"} alt="" className="sidebar-gif"/>
                     </button>
                 </div>
 
