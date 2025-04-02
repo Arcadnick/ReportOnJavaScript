@@ -14,12 +14,12 @@ function Files() {
             name: "Доклад",
             pdf: "/.files/report.pdf",
             icon: "📔" },
-        examples: {
-            name: "Примеры",
-            pdf: "/.files/examples.pdf",
-            zip: "/.files/examples.zip",
-            icon: "💻"
-        }
+        // examples: {
+        //     name: "Примеры",
+        //     pdf: "/.files/examples.pdf",
+        //     zip: "/.files/examples.zip",
+        //     icon: "💻"
+        //}
     };
 
     const [selectedFile, setSelectedFile] = useState(null);
@@ -34,6 +34,8 @@ function Files() {
                 <Link to="/tasks" className="nav-link">Задания</Link>
                 <Link to="/files" className="nav-link active">Файлы</Link>
             </nav>
+
+            <h1 className="files-title">Разные файлики</h1>
 
             <div className="files-content">
                 {/* Левая панель с кнопками */}

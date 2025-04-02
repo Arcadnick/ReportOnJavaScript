@@ -159,6 +159,31 @@ html, body {
     100% { opacity: 0.2; }
 }
 
+/* 7. Transition */
+.transition-box {
+    /*width: 100px;*/
+    /*height: 100px;*/
+    background-color: #3498db;
+    transition: transform 0.5s ease-in-out,
+    background-color 0.5s ease-in-out;
+}
+
+.transition-box:hover {
+    transform: scale(1.2) rotate(45deg);
+    background-color: #e74c3c;
+}
+
+/*8. Timing function*/
+.timing-ease{
+    background-color: #3498db;
+    transition-timing-function: ease;
+    transition: transform 2s;
+}
+
+.timing-ease:hover{
+    transform: translateX(300px);
+}
+
 /* ======= Всплывающее окно ======= */
 .modal {
     position: fixed;

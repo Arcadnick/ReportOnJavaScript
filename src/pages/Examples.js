@@ -63,6 +63,37 @@ function Examples() {
     0% { opacity: 1; }
     100% { opacity: 0.2; }
 }`
+        },
+        {
+            id: 7,
+            name: "Transition",
+            className: "transition-box",
+            code: `.transition-box {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  transition: transform 0.5s ease-in-out, 
+  background-color 0.5s ease-in-out;
+}
+
+.transition-box:hover {
+  transform: scale(1.2) rotate(45deg);
+  background-color: #e74c3c;
+}`
+        },
+        {
+            id: 8,
+            name: "Timing",
+            className: "timing-ease",
+            code: `.timing-ease{
+    background-color: #3498db;
+    transition-timing-function: ease;
+    transition: transform 2s;
+}
+
+.timing-ease:hover{
+    transform: translateX(300px);
+}`
         }
     ];
 

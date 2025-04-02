@@ -18,8 +18,9 @@ function EasterEgg() {
 
             {/* Баннер */}
             <div className="banner">
-                <p></p>
+                <p>Пока, Andrew Kornew...</p>
             </div>
+
         </div>
     );
 }
