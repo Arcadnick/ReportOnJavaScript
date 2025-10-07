@@ -30,7 +30,7 @@ function Home() {
 
             {/* GIF */}
             <div className="gif-container">
-                <img src={"/.files/oia-uia.gif"} alt="Animation" className="gif-image" />
+                <img src={"/files/oia-uia.gif"} alt="Animation" className="gif-image" />
             </div>
 
             {/* Копирайт */}

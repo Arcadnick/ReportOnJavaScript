@@ -8,11 +8,11 @@ function Files() {
     const files = {
         presentation: {
             name: "Презентация",
-            pdf: "/.files/presentationfinal.pdf",
+            pdf: "/files/presentation1.pdf",
             icon: "📽"},
         report: {
             name: "Доклад",
-            pdf: "/.files/reportfinal.pdf",
+            pdf: "/files/report.pdf",
             icon: "📔" },
         // examples: {
         //     name: "Примеры",
@@ -51,7 +51,7 @@ function Files() {
                     ))}
                     {/* Гифка под кнопками */}
                     <button className="gif-button" onClick={() => navigate("/easteregg")}>
-                        <img src={"/.files/download.gif"} alt="" className="sidebar-gif"/>
+                        <img src={"/files/download.gif"} alt="" className="sidebar-gif"/>
                     </button>
                 </div>
 
