@@ -8,11 +8,11 @@ function Files() {
     const files = {
         presentation: {
             name: "Презентация",
-            pdf: "/.files/presentation.pdf",
+            pdf: "/.files/presentationfinal.pdf",
             icon: "📽"},
         report: {
             name: "Доклад",
-            pdf: "/.files/report.pdf",
+            pdf: "/.files/reportfinal.pdf",
             icon: "📔" },
         // examples: {
         //     name: "Примеры",
